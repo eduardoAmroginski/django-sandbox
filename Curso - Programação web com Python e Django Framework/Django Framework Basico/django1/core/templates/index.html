@@ -11,5 +11,25 @@
     <h2>{{ curso }}</h2>
     <p>{{ outro }}</p>
     <p>{{ logado }}</p>
+
+    <h2>Produtos no Banco de Dados</h2>
+    
+    <table style="width: 100%; text-align: center;">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Preço (R$)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for produto in produtos %}
+          <tr>
+            <td><a href="{% url 'produto' produto.id %}">{{ produto.nome }}</a></td>
+            <td>{{ produto.preco }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+
   </body>
 </html>
