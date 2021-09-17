@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -5,16 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Django 1 - Index</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
   </head>
   <body>
     <h1>Index</h1>
+
+    <img src="{% static 'images/django.png' %}"/>
+
     <h2>{{ curso }}</h2>
     <p>{{ outro }}</p>
     <p>{{ logado }}</p>
 
     <h2>Produtos no Banco de Dados</h2>
     
-    <table style="width: 100%; text-align: center;">
+    <table >
       <thead>
         <tr>
           <th>Nome</th>
@@ -30,6 +36,10 @@
         {% endfor %}
       </tbody>
   </table>
+
+  <button onclick="teste();">Clique aqui</button>
+
+  <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
 
   </body>
 </html>
