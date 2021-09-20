@@ -1,0 +1,9 @@
+/venv-django1
+
+__pycache__
+
+*.*~
+
+*.pyc
+
+.idea

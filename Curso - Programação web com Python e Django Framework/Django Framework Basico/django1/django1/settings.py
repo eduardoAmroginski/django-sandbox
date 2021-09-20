@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-fz#y^bgi%nf4on^w=8#yl!7&ov9!cd-z01xznaaj3avo32mx!f
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG com valor TRUE = modo desenvolvimento
 # DEBUG com valor FALSE = modo produção
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
